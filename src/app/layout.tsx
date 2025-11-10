@@ -16,9 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider proxyUrl={process.env.NEXT_PUBLIC_CLERK_PROXY_URL}>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={`${inter.className} bg-background-light text-text-dark min-h-screen flex flex-col`}>          <Header />
+          <main className="flex-grow">
+            {children}
+          </main></body>
       </html>
     </ClerkProvider>
   );

@@ -18,26 +18,23 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-dark-gray">
-      <div className="bg-accent text-dark-gray text-center py-1 text-sm">
-        Your Banner Text Here
-      </div>
+    <header className="bg-white shadow-sm">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="sm:hidden">
-              {/* Mobile menu button */}
-            </div>
-            <div className="flex space-x-1">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-primary">
+              TechLine
+            </Link>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-4">
               {tabs.map((tab) => (
                 <Link
                   key={tab.name}
                   href={tab.href}
                   className={classNames(
                     pathname === tab.href
-                      ? 'bg-white text-dark-gray'
-                      : 'bg-light-gray text-dark-gray hover:bg-white/80',
-                    'rounded-t-lg px-4 py-2 text-sm font-medium'
+                      ? 'text-primary border-b-2 border-primary'
+                      : 'text-gray-600 hover:text-primary',
+                    'px-3 py-2 text-sm font-medium transition-colors duration-200'
                   )}
                   aria-current={pathname === tab.href ? 'page' : undefined}
                 >
@@ -47,7 +44,7 @@ export default function Header() {
             </div>
           </div>
           <div className="flex items-center">
-            <UserButton />
+            <UserButton afterSignOutUrl="/" />
           </div>
         </div>
       </div>
