@@ -28,7 +28,7 @@ export default function Header() {
             <div className="sm:hidden">
               {/* Mobile menu button */}
             </div>
-            <div className="hidden sm:flex sm:space-x-1">
+            <div className="flex space-x-1">
               {tabs.map((tab) => (
                 <Link
                   key={tab.name}
