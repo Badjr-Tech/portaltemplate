@@ -6,11 +6,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      'dark-gray': '#2f2f2f',
-      'light-gray': '#dedede',
-      'white': '#ffffff',
-      'accent': '#ffbd59',
+    extend: {
+      colors: {
+        'dark-gray': '#2f2f2f',
+        'light-gray': '#dedede',
+        'white': '#ffffff',
+        'accent': '#ffbd59',
+      },
     },
   },
   plugins: [],
