@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider proxyUrl={process.env.NEXT_PUBLIC_CLERK_PROXY_URL} signInFallbackRedirectUrl="/dashboard">
+    <ClerkProvider signInFallbackRedirectUrl="/dashboard">
       <html lang="en">
         <body className={`${inter.className} bg-background-light text-text-dark min-h-screen flex flex-col`}>          <Header />
           <main className="flex-grow">
