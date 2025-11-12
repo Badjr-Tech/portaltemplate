@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider signInFallbackRedirectUrl="/dashboard">
       <html lang="en">
-        <body className={`${inter.className} bg-background-light text-text-dark min-h-screen flex flex-col`}>          <Header />
+        <body className={`${inter.className} bg-background-light text-text-dark min-h-screen flex flex-col`}>          
           <main className="flex-grow">
             {children}
           </main></body>
