@@ -26,6 +26,9 @@ export default async function Home() {
         <Link href={userId ? "/dashboard" : "/sign-up"} className="bg-green-500 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full text-lg">
           Get Started
         </Link>
+        <p className="text-lg text-gray-400 mt-8 max-w-2xl">
+          This portal, powered by Badjr Tech, is designed to be simple, modern, and complete — everything you need, all in one place. Its clean, intuitive layout makes navigation effortless, while sleek design elements keep the experience fresh and professional. Whether you’re managing data, connecting with others, or organizing business operations, every feature is built for clarity and efficiency. No clutter, no confusion — just a seamless platform from Badjr Tech that works the way you do.
+        </p>
       </main>
     </div>
   );
