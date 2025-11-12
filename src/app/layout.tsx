@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   console.log('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY in layout.tsx:', process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
   return (
-    <ClerkProvider signInFallbackRedirectUrl="/dashboard">
+    <ClerkProvider signInFallbackRedirectUrl="/dashboard" signInUrl="/sign-in">
       <html lang="en">
         <body className={`${inter.className} bg-background-light text-text-dark min-h-screen flex flex-col`}>          
           <main className="flex-grow">
