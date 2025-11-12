@@ -15,6 +15,7 @@
   "type": "module",
   "dependencies": {
     "@clerk/nextjs": "^6.34.6",
+    "@clerk/themes": "^2.4.35",
     "@tailwindcss/postcss": "^4.1.17",
     "next": "^16.0.1",
     "react": "^19.2.0",
