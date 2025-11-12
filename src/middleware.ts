@@ -9,10 +9,8 @@ export default clerkMiddleware((auth, req) => {
   if (isProtectedRoute(req)) {
     auth.protect();
   }
-}, {
-  publicRoutes: ["/sign-in(.*)", "/sign-up(.*)"]
 });
 
 export const config = {
-  matcher: ['/', '/dashboard(.*)'],
+  matcher: ['/', '/dashboard(.*)', '/((?!.+\\.[\\w]+$|_next).*)'],
 };
