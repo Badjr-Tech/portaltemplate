@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 
-export default function Home() {
-  const { userId } = auth();
+export default async function Home() {
+  const { userId } = await auth();
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
