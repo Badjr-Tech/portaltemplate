@@ -11,13 +11,29 @@ export const metadata: Metadata = {
   description: "A simple portal with Clerk and Next.js",
 };
 
+import { dark } from '@clerk/themes';
+
+// ... (rest of the imports)
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider signInFallbackRedirectUrl="/dashboard" signInUrl="/sign-in">
+    <ClerkProvider
+      signInFallbackRedirectUrl="/dashboard"
+      signInUrl="/sign-in"
+      appearance={{
+        baseTheme: dark,
+        variables: {
+          colorPrimary: '#476c2e',
+          colorWarning: '#ffbd5a',
+          colorText: '#ffffff',
+          colorBackground: '#363636',
+        },
+      }}
+    >
       <html lang="en">
         <body className={`${inter.className} bg-background-light text-text-dark min-h-screen flex flex-col`}>          
           <main className="flex-grow">
