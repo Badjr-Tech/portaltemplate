@@ -1,4 +1,4 @@
-import { auth, redirectToSignIn } from '@clerk/nextjs/server';
+import { auth, redirectToSignIn } from '@clerk/nextjs';
 
 export default async function DashboardPage() {
   const { userId } = await auth();
