@@ -1,16 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { auth } from '@clerk/nextjs/server'; // Keep auth for server-side check, but client component will re-render
+import { useAuth } from '@clerk/nextjs';
 import { RedirectToSignIn } from '@clerk/nextjs';
 
 export default function DashboardPage() {
-  // This auth check is primarily for initial server render.
-  // Client-side navigation will handle redirects if not authenticated.
-  // For a client component, you might typically use useUser() or useAuth() from @clerk/nextjs
-  // but for simplicity and to match previous server component logic, we'll keep this structure.
-  // In a real app, you'd likely fetch user data client-side if this is purely client-rendered.
-  const { userId } = auth();
+  const { userId } = useAuth();
   if (!userId) {
     return <RedirectToSignIn />;
   }
