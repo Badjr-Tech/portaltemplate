@@ -9,7 +9,9 @@ export default async function Home() {
       {userId ? (
         <p>You are signed in as user: {userId}</p>
       ) : (
-        <p>Please sign in to continue.</p>
+        <a href="/sign-in" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Sign In
+        </a>
       )}
     </div>
   );
