@@ -16,6 +16,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log('NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY in layout.tsx:', process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
   return (
     <ClerkProvider signInFallbackRedirectUrl="/dashboard">
       <html lang="en">
